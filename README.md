@@ -8,17 +8,17 @@ conté les dates dels dies no lectius
 
 
 Hi ha diverses col·leccions per a cada cicle.
-
-- `prefix_moduls`
-- `prefix_ras`
-- `prefix_continguts`
-- `prefix_programacio`
-- `prefix`
-
+```
+- prefix_moduls
+- prefix_ras
+- prefix_continguts
+- prefix_programacio
+- prefix
+```
 El prefix de totes les col·leccions d'un cicle, es crea amb:
 `gX_sigles_del_cicle`
-`X` és M per a cicles de grau mig i `s` per a cicles de grau superior. 
-Per exemple: gs_daw...
+`X` és `m` per a cicles de grau mig i `s` per a cicles de grau superior. 
+Per exemple: `gs_daw_moduls`  
 
 
 ## Configuració Tailwindcss
