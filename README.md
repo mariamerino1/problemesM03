@@ -8,6 +8,7 @@ conté les dates dels dies no lectius
 
 
 Hi ha diverses col·leccions per a cada cicle.
+
 -`prefix_moduls`
 -`prefix_ras`
 -`prefix_continguts`
