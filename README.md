@@ -30,11 +30,9 @@ Aquest .py conté un main() amb els exemples,
 ## PAS 2. inserir els docs .json en col·leccions mongodb
 Executar `mongo_inserts.py`
 
-Es connecta a la base de dades en server mongodb i crea les col·leccions a partir dels .json que es trobin al directori escollit.
+Es connecta a la base de dades en server mongodb i crea les col·leccions a partir dels .json que es trobin al directori escollit. (Al exemple d'aquest main "./")
 
-(Al exemple d'aquest main "./")
-
-Els .json han de ser tal com s'han obtingut de `cur_a_json.py`. Fa la connexió a partir de `SRV_URI` que *ha d'estar* guardada en un fitxer *.env* al mateix directori que aquest .py
+Els .json han de ser tal com s'han obtingut de `cur_a_json.py`. Fa la connexió a partir de **SRV_URI** que **ha d'estar** guardada en un fitxer **.env** al mateix directori que aquest .py
 
 Per veure detalls:
 ```
