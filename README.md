@@ -14,18 +14,17 @@ Per executar: cal tenie en el mateix directori:
 
   Aquest .py (curr_a_json.py)
   
-  Els fitxers de text pla a processar (fitxers font)
-  
-    Exemple SMX_curr.txt, ASIX_curr.txt, DAW_curr.txt
+  Els fitxers de text pla a processar (**fitxers font**).
     
 Aquest .py conté un main() amb els exemples, 
   si es canvia els curriculums a parsejar, canviar el main()
   
-**Cal preparar fitxers font (els .txt)**: 
+**Cal preparar fitxers font**: 
   - Traure capçaleres i peus i guardar en format text (per exemple amb Writer)
   - Comprovar manualment que totes les línies comencen com toca: 
     - moduls, RAs, CAs i continguts en un número seguit d'un punt.
   - A tenir en compte:  Esborrarà totes les línies que tinguin menys de 5 caràcters.
+  - **Exemples: SMX_curr.txt, ASIX_curr.txt, DAW_curr.txt**
 
 ## PAS 2. inserir els docs .json en col·leccions mongodb
 Executar `mongo_inserts.py`
