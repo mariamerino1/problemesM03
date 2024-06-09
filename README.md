@@ -1,73 +1,43 @@
-# problemesM03
-# DRAFT model de dades
+# PARSER de docs gencat d'1 cicle a col·leccions mongodb.
 
-## Convenis
-Una col·lecció per guardar el calendari.
-`calendari`
-conté les dates dels dies no lectius
+## PAS 1. de fitxer txt a fitxers .json
 
+'curr_a_json.py' 
 
-Hi ha diverses col·leccions per a cada cicle.
+Transforma fitxers de text que contenen el llistat de mòduls publicat per gencat en maig de 2024, en fitxers .json que contenen documents 
+Per veure detalls:
 ```
-- gX_yyy_moduls
-- gX_yyy_ras
-- gX_yyy_continguts
-- gX_yyy_programacio
-- gX_yyy_rel_prog_ras
+import curr_a_json
+help(curr_a_json)
 ```
-`X` és:
+Per executar: cal tenie en el mateix directori:
 
-  `m` per a cicles de grau mig
-  `s` per a cicles de grau superior.
+  Aquest .py (curr_a_json.py)
+  
+  Els fitxers de text pla a processar (fitxers font)
+  
+    Exemple SMX_curr.txt, ASIX_curr.txt, DAW_curr.txt
+    
+Aquest .py conté un main() amb els exemples, 
+  si es canvia els curriculums a parsejar, canviar el main()
+  
+**Cal preparar fitxers font (els .txt)**: 
+  - Traure capçaleres i peus i guardar en format text (per exemple amb Writer)
+  - Comprovar manualment que totes les línies comencen com toca: 
+    - moduls, RAs, CAs i continguts en un número seguit d'un punt.
+  - A tenir en compte:  Esborrarà totes les línies que tinguin menys de 5 caràcters.
 
-`yyy` són les sigles d'un títol.
+## PAS 2. inserir els docs .json en col·leccions mongodb
+'mongo_inserts.py'
 
-Per exemple: `gs_daw_moduls`  
+Es connecta a la base de dades en server mongodb i crea les col·leccions a partir dels .json que es trobin al directori escollit.
 
-## Exemples de documents.
-### gs_daw_moduls
-```json
-[
-    {
-        "_id": "0373",
-        "modul": "Llenguatges de marques i sistemes de gestió d’informació",
-        "durada": 99,
-        "hores_centre": 66,
-        "hores_empresa": 33,
-        "ects": 7
-    }
-]
+(Al exemple d'aquest main "./")
+
+Els .json han de ser tal com s'han obtingut de `cur_a_json.py`. Fa la connexió a partir de `SRV_URI` que *ha d'estar* guardada en un fitxer *.env* al mateix directori que aquest .py
+
+Per veure detalls:
 ```
-### gs_daw_ras
-```json
-[
-    {
-        "_id": "0373ra1",
-        "desc": "1. Reconeix les característiques de llenguatges de marques analitzant i interpretant fragments de codi.",
-        "cas": [
-            "1.1 Identifica les característiques generals dels llenguatges de marques.",
-            "1.x ... criteris d'avaluació",
-            "1.9 Identifica els avantatges que aporten els espais de noms."
-        ]
-    }
-]
+import mongo_inserts
+help(mongo_inserts)
 ```
-### gs_daw_continguts
-```json
-[
-    {
-        "_id": "0373con1",
-        "desc": "1. Reconeixement de les característiques de llenguatges de marques:",
-        "continguts": [
-            "1.1 Classificació.",
-            "1.2 Característiques i àmbits d'aplicació.",
-            "1.3 Estructura i sintaxi.",
-            "1.4 Eines d'edició.",
-            "1.5 Elaboració de documents ben formats.",
-            "1.6 Utilització d'espais de noms."
-        ]
-    }
-]
-```
-
-### gX
