@@ -2,7 +2,7 @@
 
 ## PAS 1. de fitxer txt a fitxers .json
 
-'curr_a_json.py' 
+Executar `curr_a_json.py`
 
 Transforma fitxers de text que contenen el llistat de mòduls publicat per gencat en maig de 2024, en fitxers .json que contenen documents 
 Per veure detalls:
@@ -28,7 +28,7 @@ Aquest .py conté un main() amb els exemples,
   - A tenir en compte:  Esborrarà totes les línies que tinguin menys de 5 caràcters.
 
 ## PAS 2. inserir els docs .json en col·leccions mongodb
-'mongo_inserts.py'
+Executar `mongo_inserts.py`
 
 Es connecta a la base de dades en server mongodb i crea les col·leccions a partir dels .json que es trobin al directori escollit.
 
