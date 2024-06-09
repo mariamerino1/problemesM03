@@ -9,23 +9,33 @@ conté les dates dels dies no lectius
 
 Hi ha diverses col·leccions per a cada cicle.
 ```
-- prefix_moduls
-- prefix_ras
-- prefix_continguts
-- prefix_programacio
-- prefix
+- gX_xxx_moduls
+- gX_xxx_ras
+- gX_xxx_continguts
+- gX_xxx_programacio
+- gX_xxx_rel_prog_ras
 ```
-El prefix de totes les col·leccions d'un cicle, es crea amb:
-`gX_sigles_del_cicle`
-`X` és `m` per a cicles de grau mig i `s` per a cicles de grau superior. 
+`X` és:
+
+  `m` per a cicles de grau mig
+  `s` per a cicles de grau superior. 
+
 Per exemple: `gs_daw_moduls`  
 
 
-## Configuració Tailwindcss
-Seguir les instruccion de la [Documentació](https://tailwindcss.tw/docs/guides/vite)
-```bash
-npm install -D tailwindcss postcss autoprefixer
-npx tailwindcss init -p
+## gX_xxx_moduls
+
+```json
+[
+    {
+        "_id": "0221",
+        "modul": "Muntatge i manteniment d’equips",
+        "durada": 231,
+        "hores_centre": 132,
+        "hores_empresa": 99
+    }
+]
+```
 
 `
 
