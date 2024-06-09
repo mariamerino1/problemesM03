@@ -11,13 +11,10 @@ import curr_a_json
 help(curr_a_json)
 ```
 Per executar: cal tenie en el mateix directori:
-
-  Aquest .py (curr_a_json.py)
-  
-  Els fitxers de text pla a processar (**fitxers font**).
+  - Aquest .py (curr_a_json.py)
+  - Els fitxers de text pla a processar (**fitxers font**).
     
-Aquest .py conté un main() amb els exemples, 
-  si es canvia els curriculums a parsejar, canviar el main()
+Aquest .py conté un main() amb exemples de fitxers font a processar, si es canvia els curriculums a parsejar, canviar el main()
   
 **Cal preparar fitxers font**: 
   - Traure capçaleres i peus i guardar en format text (per exemple amb Writer)
